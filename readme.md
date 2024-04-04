@@ -24,8 +24,3 @@ O projeto está organizado da seguinte maneira:
 - **App.Server**: Este é o projeto responsável por rodar todo o back-end da aplicação, desenvolvido em C# com .NET Core.
 - **App.Client**: Este é o projeto responsável por rodar todo o front-end da aplicação, desenvolvido em Angular.
 
-## Como Contribuir
-
-Se deseja contribuir para este projeto, siga estas etapas:
-
-1. Faça um fork deste 
