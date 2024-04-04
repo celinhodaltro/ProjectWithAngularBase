@@ -1,4 +1,4 @@
-namespace ProjectWithAngularBase.Server
+namespace App.Entities
 {
     public class WeatherForecast
     {
