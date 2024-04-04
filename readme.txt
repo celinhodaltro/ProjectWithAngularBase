@@ -1,6 +1,6 @@
 # Projeto Base
 
-Este repositório contém o código-fonte do projeto base, o intuito do mesmo é facilitar a criação de projetos .net com angular, é uma aplicação web desenvolvida com tecnologias .NET Core 8, SQL Server 2019 para o back-end e Angular 13 para o front-end.
+Este repositório contém o código-fonte do Projeto Base, que tem como objetivo facilitar a criação de projetos .NET com Angular. É uma aplicação web desenvolvida utilizando as tecnologias .NET Core 8, SQL Server 2019 para o back-end e Angular 13 para o front-end.
 
 ## Tecnologias Utilizadas
 
