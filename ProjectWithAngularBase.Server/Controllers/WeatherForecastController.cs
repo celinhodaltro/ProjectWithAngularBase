@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using App.Entities;
-namespace App.Server.Controllers
+using System.Entities;
+
+
+namespace App.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]

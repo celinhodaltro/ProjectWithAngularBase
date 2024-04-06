@@ -1,4 +1,4 @@
-namespace App.Entities
+namespace System.Entities
 {
     public class WeatherForecast
     {

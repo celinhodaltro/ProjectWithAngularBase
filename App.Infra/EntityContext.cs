@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace App.Providers
+namespace System.Providers
 {
     public class EntityContext : DbContext
     {

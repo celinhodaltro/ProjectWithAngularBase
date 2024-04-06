@@ -19,9 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\App.Entities\App.Entities.csproj" />
-    <ProjectReference Include="..\App.Infra\App.Providers.csproj" />
-    <ProjectReference Include="..\projectwithangularbase.client\App.client.esproj">
+    <ProjectReference Include="..\App.Entities\System.Entities.csproj" />
+    <ProjectReference Include="..\App.Infra\System.Providers.csproj" />
+    <ProjectReference Include="..\projectwithangularbase.client\App.Client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
