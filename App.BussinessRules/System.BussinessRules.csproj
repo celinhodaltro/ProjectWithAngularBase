@@ -8,8 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interface\" />
-    <Folder Include="BussinessRules\" />
+    <ProjectReference Include="..\App.Entities\System.Entities.csproj" />
   </ItemGroup>
 
 </Project>
