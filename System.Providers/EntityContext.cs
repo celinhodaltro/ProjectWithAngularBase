@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System.Entities.Logs;
+using System.Entities;
 using System.Providers;
 
 
