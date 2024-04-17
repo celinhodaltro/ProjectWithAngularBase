@@ -18,6 +18,7 @@ namespace App.API.Controllers
         {
             _logger = logger;
             logBusinessRules = _logBusinessRules;
+
         }
 
         [HttpGet(Name = "GetLogs")]
