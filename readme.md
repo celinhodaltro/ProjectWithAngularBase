@@ -17,10 +17,9 @@ Este repositório contém o código-fonte do Projeto Base, desenvolvido para sim
 
 O projeto está organizado da seguinte maneira:
 
-- **App.BussinessRules**: Nesta pasta, são realizados todos os tratamentos de dados do projeto. Ela é dividida em duas partes:
-  - **Interface**: Contém uma interface que define como as funções serão implementadas pela classe.
-  - **BussinessRules**: Contém as funções que realizam o tratamento de dados.
-- **App.Entities**: Aqui estão armazenadas todas as classes do projeto.
+- **System.BussinessRules**: Nesta pasta, são realizados todos os tratamentos de dados do projeto. Ela é dividida em duas partes:
+- **System.Providers**: Nesta pasta, são realizados todos os tratamentos de dados do projeto. Ela é dividida em duas partes:
+- **System.Entities**: Aqui esta toda a comunicação com o banco de dados.
 - **App.Server**: Este é o projeto responsável por rodar todo o back-end da aplicação, desenvolvido em C# com .NET Core.
 - **App.Client**: Este é o projeto responsável por rodar todo o front-end da aplicação, desenvolvido em Angular.
 
