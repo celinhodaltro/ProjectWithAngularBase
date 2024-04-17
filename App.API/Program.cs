@@ -1,26 +1,40 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Localization;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
-using System.Collections.Generic;
 using System.Providers;
+using System.BussinessRules;
+using App.API.Injections;
 
+
+#region Builder
 var builder = WebApplication.CreateBuilder(args);
 
 
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<EntityContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("App.API")));
+
+    builder.Services.AddControllers();
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen();
+
+    builder.Services.AddDbContext<EntityContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("App.API")));
+
+
+    #region Injections
+        Injections.InjectProviders(builder);
+        Injections.InjectRules(builder);
+    #endregion
+
+
+
+
+
+
 
 var app = builder.Build();
+#endregion
 
+#region Culture
 var supportedCultures = new List<CultureInfo> { new CultureInfo("pt-BR") };
 var requestLocalizationOptions = new RequestLocalizationOptions
 {
@@ -28,7 +42,9 @@ var requestLocalizationOptions = new RequestLocalizationOptions
     SupportedCultures = supportedCultures,
     SupportedUICultures = supportedCultures
 };
+#endregion
 
+#region App
 app.UseRequestLocalization(requestLocalizationOptions);
 app.UseDefaultFiles();
 app.UseStaticFiles();
@@ -44,4 +60,10 @@ app.UseAuthorization();
 app.MapControllers();
 app.MapFallbackToFile("/index.html");
 
+app.UseCors(Cors => Cors.AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowAnyOrigin());
+
 app.Run();
+
+#endregion

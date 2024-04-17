@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\System.BussinessRules\System.BussinessRules.csproj" />
     <ProjectReference Include="..\System.Entities\System.Entities.csproj" />
     <ProjectReference Include="..\System.Providers\System.Providers.csproj" />
     <ProjectReference Include="..\App.Client\App.Client.esproj">
